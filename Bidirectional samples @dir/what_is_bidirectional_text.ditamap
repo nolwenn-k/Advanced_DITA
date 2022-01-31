@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<!-- Information architecture provided by CFTTR -->
+<map xml:lang="en-us">
+    <title>What is bidirectional text?</title>
+    <topicref href="c_example_header.dita">
+        <topicref href="c_example_topic_in_english.dita"/>
+        <topicref href="c_example_topic_in_arabic.dita"/>
+    </topicref>
+    <topicref href="ref_resources.dita"/>
+</map>

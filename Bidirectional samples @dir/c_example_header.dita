@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_example_header" xml:lang="en-US">
+    <title>Example topics</title>
+    <shortdesc>First example contains English text with fragments in Arabic. The second topic
+        contains Arabic text with a fragment in English.</shortdesc>
+</concept>

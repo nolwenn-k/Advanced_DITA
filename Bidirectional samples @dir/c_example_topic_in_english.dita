@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_example_topic_in_english" xml:lang="en-US">
+    <title>Bidirectional overview</title>
+    <shortdesc>Publish this topic to check the publishing behavior for inline and block elements
+        containing left-to-right languages.</shortdesc>
+    <conbody>
+        <p>This is an example text that, within the context of an right-to-left topic, includes some
+            fragments in left-to-right language.</p>
+        <p>This can happen in a block element or in an inline element.</p>
+        <p translate="no" dir="rtl" xml:lang="ar-ar">إن شاء الله</p>
+        <ul>
+            <li>Inline element: <ph translate="no" dir="rtl" xml:lang="ar-ar">إن شاء الله</ph> in
+                the flow of the text in English.</li>
+        </ul>
+        <p>The processor SHOULD provide the proper direction for the text when publishing.</p>
+    </conbody>
+</concept>
