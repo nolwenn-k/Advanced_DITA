@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IA sample provided by IXIASOFT -->
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="glossentry_srg_zdp_trb">
+    <glossterm>conref</glossterm>
+    <glossdef>
+        <p>A conref is an element that is included by reference in multiple topics...</p>
+    </glossdef>
+</glossentry>
