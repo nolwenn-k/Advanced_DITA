@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IA sample provided by IXIASOFT -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ydp_zcp_trb">
+    <title>About the DITA Open Toolkit</title>
+    <conbody>
+        <section id="section_jlz_ldp_trb">
+            <title>&lt;abbreviated-form></title>
+            <p>Here is an example of using &lt;abbreviated-form>:</p>
+            <p>The <abbreviated-form keyref="opentoolkit"/> is what processes your DITA files. Make
+                sure you have the latest version of the <abbreviated-form keyref="opentoolkit"
+                />.</p>
+            <p>This displays the glossSurfaceForm on the first reference, and the glossAcronymForm
+                on subsequent references. If you have acronyms and you want this functionality, make
+                sure to use the abbreviated-form when referring to the glossary term.</p>
+        </section>
+        <section id="section_ol2_ldp_trb">
+            <title>&lt;term></title>
+            <p>If you don't have an abbreviated-form, you can just use the &lt;term> element, like
+                this</p>
+            <p>The <term keyref="opentoolkit"/> is what processes your DITA files. Make sure you
+                have the latest version of the <term keyref="opentoolkit"/>.</p>
+        </section>
+    </conbody>
+</concept>
