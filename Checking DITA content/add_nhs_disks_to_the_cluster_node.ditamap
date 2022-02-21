@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap xml:lang="xml:en-us">
+    <booktitle>
+        <mainbooktitle>Add additional non-hot swappable SCSI hard disks to a cluster node on a
+            shared SCSI bus </mainbooktitle>
+    </booktitle>
+    <bookmeta>
+        <author>CFTTR</author>
+        <audience type="IT" experiencelevel="beginner" />
+        <prodinfo>
+            <prodname>Windows Server 2003</prodname>
+            <vrmlist>
+                <vrm version="x"/>
+            </vrmlist>
+        </prodinfo>
+    </bookmeta>
+    <chapter href="introduction.dita"/>
+    <chapter href="add_non-hot-swap_disks.dita"/>
+    <chapter href="reference.dita"/>
+    <chapter href="SCSI.dita"/>
+</bookmap>

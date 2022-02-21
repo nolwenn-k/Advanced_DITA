@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   width="173"
+   height="181"
+   viewBox="0 0 173 181"
+   overflow="visible"
+   enable-background="new 0 0 173 181"
+   xml:space="preserve"
+   sodipodi:version="0.32"
+   inkscape:version="0.42.2"
+   sodipodi:docname="scsilogo.svg"
+   sodipodi:docbase="/home/vidarlo/amsn_received"><metadata
+   id="metadata28"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs26" /><sodipodi:namedview
+   inkscape:window-height="758"
+   inkscape:window-width="1018"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   borderopacity="1.0"
+   bordercolor="#666666"
+   pagecolor="#ffffff"
+   id="base"
+   inkscape:zoom="1.9005525"
+   inkscape:cx="86.500000"
+   inkscape:cy="90.500000"
+   inkscape:window-x="580"
+   inkscape:window-y="0"
+   inkscape:current-layer="Layer_1" />
+<g
+   id="g3">
+	<path
+   d="M135.5,63.5l9-9l-54-54l-90,90l90,90l54-54l-9-9l-45,45l-72-72l72-72L135.5,63.5z"
+   id="path5" />
+	<path
+   d="M172.5,96.9V84.1h-64v12.8H172.5z"
+   id="path7" />
+	<line
+   fill="none"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   x1="108.5"
+   y1="96.9"
+   x2="108.5"
+   y2="84.1"
+   id="line9" />
+	<polyline
+   fill="none"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   points="135.5,117.5 90.5,162.5 18.5,90.5    90.5,18.5 135.5,63.5 144.5,54.5 90.5,0.5  "
+   id="polyline11" />
+	<line
+   fill="none"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   x1="144.5"
+   y1="126.5"
+   x2="135.5"
+   y2="117.5"
+   id="line13" />
+	<polyline
+   fill="none"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   points="144.5,126.5 90.5,180.5 0.5,90.5     "
+   id="polyline15" />
+	<line
+   fill="none"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   x1="108.5"
+   y1="96.9"
+   x2="172.5"
+   y2="96.9"
+   id="line17" />
+	<line
+   fill="none"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   x1="108.5"
+   y1="84.1"
+   x2="172.5"
+   y2="84.1"
+   id="line19" />
+	<line
+   fill="none"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   x1="0.5"
+   y1="90.5"
+   x2="90.5"
+   y2="0.5"
+   id="line21" />
+	<line
+   fill="none"
+   stroke="#000000"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   x1="172.5"
+   y1="96.9"
+   x2="172.5"
+   y2="84.1"
+   id="line23" />
+</g>
+</svg>

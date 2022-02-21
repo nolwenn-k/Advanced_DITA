@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_opn_jtp_w5" xml:lang="en-us">
+    <title><ph>Adding additional non-hot swap <xref href="SCSI.dita"/> hard disks to a cluster node
+            on a shared <xref href="SCSI.dita"/> bus</ph></title>
+    <prolog>
+        <author>Windows (TM)</author>
+        <metadata>
+                <indexterm>SCSI</indexterm>
+                <indexterm>Cluster node<index-see-also>Node</index-see-also></indexterm>
+                <indexterm>Bus</indexterm>
+                <indexterm>Non-hot swappable<indexterm>Hard disk</indexterm></indexterm>
+                <indexterm>Hard disk<indexterm>Non-hot swappable</indexterm></indexterm>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>If your computer does not support hot swapping, you must shut down both cluster nodes
+                and turn off the computers to add or replace <xref href="SCSI.dita"/> disks. </p>
+            <p>You must shut down the cluster nodes completely because the shared <xref
+                    href="SCSI.dita"/> bus is disconnected when you add new disks to the <xref
+                    href="SCSI.dita"/> bus. If the bus is disconnected while you use the cluster,
+                you may lose data or have other drive-related failures. We recommends that you turn
+                off all the attached hardware while you perform this procedure. </p>
+            <p>To add additional <xref href="SCSI.dita"/> hard disks to an existing cluster, use the
+                appropriate method for your version of the operating system. </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Change the startup values for the Cluster Disk device (for Windows NT 4.0
+                    Server) or Clusdisk device (for Windows 2000 Server or for Windows Server 2003)
+                    and the Cluster service to Disabled. To do so, follow these steps:</cmd>
+                <substeps >
+                    <substep platform="Windows NT 4.0 server">
+                        <cmd>For Windows NT 4.0 Server:</cmd>
+                        <info>
+                            <ol >
+                                <li>Click <b>Start</b>, point to <b>Settings</b>, and then click
+                                        <b>Control Panel</b>.</li>
+                                <li>Double-click <b>Devices</b>.</li>
+                                <li>In the list of devices, click <b>Cluster Disk</b>, and then
+                                    click <b>Startup</b>.</li>
+                                <li>Click <b>Disabled</b>, click <b>OK</b>, and then click
+                                        <b>Close</b>.</li>
+                                <li>Close the <b>Devices</b> window.</li>
+                                <li>In Control Panel, double-click <b>Services</b>.</li>
+                                <li>In the list of services, click <b>Cluster Server</b>, and then
+                                    click <b>Startup</b>.</li>
+                                <li>Change the setting to <b>Disabled</b>, click <b>OK</b>, and then
+                                    click <b>Close</b>.</li>
+                                <li>Close the <b>Services</b> window, and then close Control
+                                    Panel.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>For Windows 2000 Server and Windows Server 2003:</cmd>
+                        <info>
+                            <ol >
+                                <li>Right-click <b>My Computer</b>, and then click
+                                    <b>Manage</b>.</li>
+                                <li>In the left pane, click <b>Device Manager</b>.</li>
+                                <li>On the <b>View</b> menu, click <b>Show hidden devices</b>.</li>
+                                <li>In the right pane, expand <b>Non-Plug and Play Drivers</b>, and
+                                    then double-click <b>Clusdisk</b>.</li>
+                                <li>On the <b>Driver</b> tab, in the <b>Type</b> box, click
+                                        <b>Disabled</b>, and then click <b>OK</b>.</li>
+                                <li>In the left pane, expand <b>Services and Applications</b>, and
+                                    then click <b>Services</b>.</li>
+                                <li>In the right pane, double-click the <b>Cluster Server</b>
+                                    service.</li>
+                                <li>In the <b>Startup type</b> box, click <b>Disabled</b>, and then
+                                    click <b>OK</b>.</li>
+                                <li>Close the Computer Management tool.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Shut down both of the cluster nodes and turn off both of the computers.</cmd>
+            </step>
+            <step>
+                <cmd>Turn off all the SCSI devices on the shared SCSI bus.</cmd>
+            </step>
+            <step>
+                <cmd>Add or replace the hard disks on the shared SCSI bus.</cmd>
+                <info>
+                    <p>
+                        <note type="note">Make sure that every device on the shared SCSI bus has a
+                            unique SCSI ID. SCSI host adapters each use a SCSI ID (typically 6 and
+                            7). Also, make sure that the SCSI bus is terminated correctly.</note>
+                    </p>
+                    <p> For additional information about connecting SCSI devices or about SCSI
+                        termination, click the following article numbers to view the articles in the
+                        Microsoft Knowledge Base: <xref
+                            href="https://support.microsoft.com/en-us/kb/101352" format="html"
+                           >101352</xref> Properly connecting SCSI devices to
+                        Windows NT <xref href="https://support.microsoft.com/en-us/kb/92765"
+                            format="html" >92765</xref> Terminating a SCSI
+                        Device</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Start node 1 of the cluster and let Windows to completely start on the
+                    node.</cmd>
+            </step>
+            <step>
+                <cmd>Turn on node 2 of the cluster, but do not let Windows start on the second node.
+                    To stop Windows from loading:</cmd>
+                <substeps>
+                    <substep platform="Windows NT 4.0 server">
+                        <cmd>For Windows NT 4.0 Server, at the <b>OS Loader</b> menu, press SPACEBAR
+                            to pause the startup. When you pause the startup, you prevent Windows NT
+                            from loading.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>For Windows 2000 Server, when the computer first starts and you see the
+                                <b>For troubleshooting and advanced startup options for Windows
+                                2000, press F8</b> message at the bottom of the screen, press F8 to
+                            pause the computer.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>For Windows Server 2003, press F8 when the Power On Self Test (POST) is
+                            complete. </cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>On node 1, partition and format the new drive, and then assign drive letters to
+                    the new disks that are available on the shared SCSI bus.</cmd>
+                <substeps >
+                    <substep>
+                        <cmd>For Windows NT 4.0 Server:</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <b>Start</b>, point to <b>Programs</b>, point to
+                                <b>Administrative Tools</b>, and then click <b>Disk
+                                Administrator</b> (Windisk.exe).</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Right-click the free space on the new drive, and then click
+                                <b>Create</b> to create a partition.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Type a partition size in megabytes (MB), and then click
+                            <b>OK</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Right-click the new partition, click <b>Commit Changes Now</b>, click
+                                <b>Yes</b> to save the changes, and then click <b>OK</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Right-click the new partition, and then click <b>Format</b>. Under
+                                <b>File System</b>, click <b>NTFS</b>, click <b>Start</b>, click
+                                <b>OK</b>, click <b>OK</b> again, and then click <b>Close</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Right-click the partition, click <b>Assign Drive Letter</b>, click the
+                            drive letter that you want, click <b>OK</b>, and then click <b>Yes</b>
+                            to assign a drive letter to the partition. </cmd>
+                        <info>For additional information about best practices for drive-letter
+                            assignments on a server cluster, click the following article number to
+                            view the article in the Microsoft Knowledge Base: <xref
+                                href="https://support.microsoft.com/en-us/kb/318534" format="html"
+                                scope="external">318534</xref> Best practices for drive-letter
+                            assignments on a server cluster.</info>
+                    </substep>
+                    <substep>
+                        <cmd>On the Tools menu, click Properties, and then in the Label box, type a
+                            volume label that matches the corresponding drive letter.For example, to
+                            label the partition for drive E, type E.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Repeat steps 1 to 7 of this section for each new drive and
+                            partition.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>For Windows 2000 Server and Windows Server 2003:</cmd>
+                <substeps >
+                    <substep>
+                        <cmd>Right-click <b>My Computer</b>, and then click <b>Manage</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Expand <b>Storage</b>, and then click <b>Disk Management</b>.</cmd>
+                        <info>
+                            <note type="note">If you connect to a new drive, the Write Signature and
+                                Upgrade Disk Wizard starts automatically. Click <b>Next</b> to go
+                                through the wizard. The wizard sets the disk to dynamic. To reset
+                                the disk to Basic, right-click <b>Disk n</b>, where n specifies the
+                                disk you are working with, and then click <b>Revert To Basic
+                                    Disk</b>. Make sure that the disk is set to Basic before you
+                                partition the hard disk in step 3. For additional information about
+                                dynamic and basic disks in a Cluster service environment, click the
+                                following article number to view the article in the Microsoft
+                                Knowledge Base: <xref
+                                    href="https://support.microsoft.com/en-us/kb/237853"
+                                    format="html" >237853</xref> Dynamic disk
+                                configuration unavailable for server cluster disk resources.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Right-click the unallocated space on the new drive, and then click
+                                <b>Create Partition</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the <b>Create Partition Wizard</b>, click <b>Next</b>, click the
+                            type of partition that you want, click <b>Next</b>, type the size of the
+                            partition in megabytes (MB), and then click <b>Next</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click the drive letter that you want to assign to the partition, and
+                            then click <b>Next</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Under <b>Formatting</b>, make sure that the <b>File system to use</b>
+                            drop-down list is set to NTFS.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the <b>Volume label</b> box, type a volume label that matches the
+                            corresponding drive letter, click <b>Next</b> and then click
+                                <b>Finish</b>. For example, to label the partition for drive E, type
+                            E.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Repeat steps 1 to 7 of this section for each new drive and
+                            partition.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Restore the original startup values for the Cluster Disk or Clusdisk device and
+                    the Cluster service. To do so, follow the procedure outlined in steps 1a or 1b,
+                    depending on your operating system, except:</cmd>
+                <substeps >
+                    <substep platform="Windows NT 4.0 server">
+                        <cmd>In <b>Devices</b>, change the <b>Startup</b> value for the <b>Cluster
+                                Disk</b> device (in Windows NT 4.0 Server) or <b>Clusdisk</b> device
+                            (in Windows 2000 Server or in Windows Server 2003) to
+                            <b>System</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In <b>Services</b>, change the <b>Startup</b> value for the <b>Cluster
+                                Server</b> service to <b>Automatic</b>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Restart node 1, but do not let Windows start on the first node. To stop Windows
+                    from loading:</cmd>
+                <substeps >
+                    <substep>
+                        <cmd>For Windows NT 4.0 Server, at the <b>OS Loader</b> menu, press SPACEBAR
+                            to pause the startup. When you pause the startup, you prevent Windows NT
+                            from loading.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>For Windows 2000 Server, when the computer first starts and you see the
+                                <b>For troubleshooting and advanced startup options for Windows
+                                2000, press F8</b> message at the bottom of the screen, press F8 to
+                            pause the computer.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>For Windows Server 2003, press F8 when the Power On Self Test (POST) is
+                            complete. </cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>On node 2, let the operating system start. To do so, follow the steps as
+                    appropriate for your operating system:</cmd>
+                <choices >
+                    <choice>For Windows NT 4.0 Server, press SPACEBAR. </choice>
+                    <choice>For Windows 2000 Server, use the arrow keys to select <b>Boot
+                        Normally</b>, and then press ENTER.</choice>
+                    <choice>For Windows Server 2003, use the arrow keys to select <b>Start
+                                    Windows Normally</b>, press ENTER, use the arrow keys to select
+                        the operating system, and then press ENTER.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>On node 2, use Disk Administrator or the Computer Management tool (depending on
+                    your operating system) to assign drive letters to the new disks that are
+                    available on the shared SCSI bus. Make sure that when you assign drive letters
+                    to the disks on the shared SCSI bus, you use the same letter assignments as on
+                    the first node (created in step 7).</cmd>
+            </step>
+            <step>
+                <cmd>Restore the original startup values for the Cluster Disk or Clusdisk device and
+                    the Cluster service. To do so, follow the steps discussed in steps 1a or 1b,
+                    depending on your operating system, except:</cmd>
+                <substeps >
+                    <substep>
+                        <cmd>In <b>Devices</b>, change the <b>Startup</b> value for the <b>Cluster
+                                Disk</b> device (in Windows NT 4.0 Server) or <b>Clusdisk</b> device
+                            (in Windows 2000 Server or in Windows Server 2003) to
+                            <b>System</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In <b>Services</b>, change the <b>Startup</b> value for the <b>Cluster
+                                Server</b> service to <b>Automatic</b>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Restart node 2 and let the computer completely restart.</cmd>
+            </step>
+            <step>
+                <cmd>Use the Cluster Administrator tool to create a physical disk resource for each
+                    new disk, and then bring the disks online.</cmd>
+            </step>
+            <step>
+                <cmd>If there are errors, check the SCSI cabling, termination and SCSI ID assignment
+                    for correct configuration. For additional information about cluster disk and
+                    drive connection issues, visit the following Microsoft Web
+                    site:http://technet.microsoft.com/en-us/library/cc757627.aspx</cmd>
+            </step>
+            <step>
+                <cmd>If there are no errors, let the operating system start on node 1. To do so,
+                    follow the steps as appropriate for your operating system:</cmd>
+                <substeps platform="">
+                    <substep platform="Windows NT 4.0 server">
+                        <cmd>For Windows NT 4.0 Server, press SPACEBAR.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>For Windows 2000 Server, use the arrow keys to select <b>Boot
+                                Normally</b>, and then press ENTER.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>For Windows Server 2003, use the arrow keys to select <b>Start Windows
+                                Normally</b>, press ENTER, use the arrow keys to select the
+                            operating system, and then press ENTER.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>When the node comes online and appears so in Cluster Administrator, try to move
+                    the group to the node. To do so, right-click the group, and then select the
+                    option <b>Move</b>. The group and all of its resources move to another node.
+                    Test to verify that you can go online on each node.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="topic_e3k_gtp_w5" xml:lang="en-us">
+  <title>Introduction</title>
+  <taskbody>
+    <prereq>This article discusses how to add additional non-hot swap small computer system interface
+      (SCSI) hard disks to a cluster node, on a shared SCSI bus. Follow the guidelines discussed in
+      this article if your computer does not support the hot swapping of SCSI hard disks.</prereq>
+  </taskbody>
+</task>

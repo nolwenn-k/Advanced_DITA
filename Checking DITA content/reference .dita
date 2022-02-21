@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_lrl_cvp_w5" xml:lang="en-us">
+    <title>References</title>
+    <taskbody>
+        <context>
+            <p>For additional information about Microsoft Cluster service and how to add an
+                additional SCSI hard disk, see <i>Chapter 4 of the Microsoft Cluster Server
+                    Administrator's Guide</i>. To locate the guide, visit the following Microsoft
+                Web site:<xref
+                    href="http://www.microsoft.com/resources/documentation/windowsnt/4/server/proddocs/en-us/clustsvr/mscsadm0.mspx"
+                    format="html"
+                    >http://www.microsoft.com/resources/documentation/windowsnt/4/server/proddocs/en-us/clustsvr/mscsadm0.mspx</xref>
+                For additional information about how to replace a disk that is on a Windows 2000 or
+                a Windows Server 2003 cluster, click the following article number to view the
+                article in the Microsoft Knowledge Base: <xref
+                    href="https://support.microsoft.com/en-us/kb/305793" format="html"
+                    scope="external">305793</xref> How to replace a disk that is on a Windows 2000
+                or a Windows Server 2003 cluster </p>
+        </context>
+        <steps>
+            <step>
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

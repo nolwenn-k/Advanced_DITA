@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE subjectScheme PUBLIC "-//OASIS//DTD DITA Subject Scheme Map//EN" "subjectScheme.dtd"> 
+<subjectScheme>
+    <!-- Definis les nouvelles valeurs d'attributs -->
+    <subjectdef keys="audience">
+        <subjectdef keys="admin"/>
+        <subjectdef keys="IT"/>
+    </subjectdef>
+    <subjectdef keys="platforms">
+        <subjectdef keys="Windows NT 4.0 server"/>
+        <subjectdef keys="Windows 2000 server"/>
+        <subjectdef keys="Windows server 2003"/>
+    </subjectdef>
+    <!-- Definis les attributs que je personnalise -->
+    <enumerationdef>
+        <attributedef name="audience"/>
+        <subjectdef keyref="audience"/>
+    </enumerationdef>
+    <enumerationdef>
+        <attributedef name="platform"/>
+        <subjectdef keyref="platform"/>
+    </enumerationdef>
+</subjectScheme>
